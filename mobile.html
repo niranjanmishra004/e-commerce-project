@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaNest Store — Mobiles Collection</title>
+    <meta name="description" content="Mobiles Collection at NexaNest Store with CSS-only cart interactions and product details view.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="market-body category-body">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <aside class="side-drawer">
+        <div class="drawer-head">
+            <h2>Browse Categories</h2>
+            <label for="menu-toggle" class="close-drawer" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="mens.html"><i class="fa-solid fa-shirt"></i> Men</a>
+            <a href="womens.html"><i class="fa-solid fa-person-dress"></i> Women</a>
+            <a href="kids.html"><i class="fa-solid fa-child-reaching"></i> Kids</a>
+            <a href="electronics.html"><i class="fa-solid fa-tv"></i> Electronics</a>
+            <a href="mobile.html" class="drawer-active"><i class="fa-solid fa-mobile-screen-button"></i> Mobiles</a>
+            <a href="furniture.html"><i class="fa-solid fa-couch"></i> Furniture</a>
+        </nav>
+    </aside>
+    <label for="menu-toggle" class="drawer-overlay"></label>
+
+    <header class="market-topbar">
+        <div class="topbar-left">
+            <label for="menu-toggle" class="menu-icon" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <a href="index.html" class="brand-logo">NexaNest</a>
+        </div>
+        <div class="topbar-search">
+            <input type="text" placeholder="Search mobiles collection">
+            <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="topbar-right">
+            <a href="#"><i class="fa-solid fa-user"></i> Account</a>
+            <a href="#category-products" class="cart-link"><i class="fa-solid fa-cart-shopping"></i> Cart <span class="cart-badge" aria-hidden="true"></span></a>
+        </div>
+    </header>
+
+    <main class="market-main">
+        <section class="category-hero">
+            <p class="promo-tag">NexaNest Mobiles</p>
+            <h1>Mobiles Collection</h1>
+            <p>Phones and accessories selected for performance and value.</p>
+        </section>
+
+        <section class="quick-categories">
+            <a href="mens.html">Men</a>
+            <a href="womens.html">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="electronics.html">Electronics</a>
+            <a href="mobile.html" class="quick-active">Mobiles</a>
+            <a href="furniture.html">Furniture</a>
+        </section>
+
+        <section class="featured-products" id="category-products">
+            <div class="section-head">
+                <h2>Shop Mobiles Collection</h2>
+                <a href="index.html">Back to Home</a>
+            </div>
+
+            <div class="market-grid category-grid">
+                <article class="market-card">
+                    <a href="#mobile-detail-1" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Phone A">
+                    </a>
+                    <h3><a href="#mobile-detail-1" class="product-title-link">Phone Model A</a></h3>
+                    <p>Phone Model A is a premium phones pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹29,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="mobile-cart-1" class="cart-check" aria-label="Add Phone Model A to cart">
+                            <label for="mobile-cart-1" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#mobile-detail-2" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Phone B">
+                    </a>
+                    <h3><a href="#mobile-detail-2" class="product-title-link">Phone Model B</a></h3>
+                    <p>Phone Model B is a premium phones pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹39,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="mobile-cart-2" class="cart-check" aria-label="Add Phone Model B to cart">
+                            <label for="mobile-cart-2" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#mobile-detail-3" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1496187278893-3ffb5f8fbf11?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Case">
+                    </a>
+                    <h3><a href="#mobile-detail-3" class="product-title-link">Protective Case</a></h3>
+                    <p>Protective Case is a premium accessories pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹699</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="mobile-cart-3" class="cart-check" aria-label="Add Protective Case to cart">
+                            <label for="mobile-cart-3" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#mobile-detail-4" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1510557880182-3ab7d4d3d3c9?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Charger">
+                    </a>
+                    <h3><a href="#mobile-detail-4" class="product-title-link">Fast Charger</a></h3>
+                    <p>Fast Charger is a premium accessories pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="mobile-cart-4" class="cart-check" aria-label="Add Fast Charger to cart">
+                            <label for="mobile-cart-4" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#mobile-detail-5" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1512496015851-1a2b3c4d5e6f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Earphones">
+                    </a>
+                    <h3><a href="#mobile-detail-5" class="product-title-link">Wireless Earphones</a></h3>
+                    <p>Wireless Earphones is a premium audio pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹1,299</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="mobile-cart-5" class="cart-check" aria-label="Add Wireless Earphones to cart">
+                            <label for="mobile-cart-5" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#mobile-detail-6" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682609-4b5c6d7e8f9a?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Screen Protector">
+                    </a>
+                    <h3><a href="#mobile-detail-6" class="product-title-link">Tempered Glass</a></h3>
+                    <p>Tempered Glass is a premium accessories pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹399</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="mobile-cart-6" class="cart-check" aria-label="Add Tempered Glass to cart">
+                            <label for="mobile-cart-6" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#mobile-detail-7" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682619-5c6d7e8f9a0b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Power Bank">
+                    </a>
+                    <h3><a href="#mobile-detail-7" class="product-title-link">10,000mAh Power Bank</a></h3>
+                    <p>10,000mAh Power Bank is a premium power pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹1,199</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="mobile-cart-7" class="cart-check" aria-label="Add 10,000mAh Power Bank to cart">
+                            <label for="mobile-cart-7" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#mobile-detail-8" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682629-6d7e8f9a0b1c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Gimbal">
+                    </a>
+                    <h3><a href="#mobile-detail-8" class="product-title-link">Handheld Gimbal</a></h3>
+                    <p>Handheld Gimbal is a premium gadgets pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹4,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="mobile-cart-8" class="cart-check" aria-label="Add Handheld Gimbal to cart">
+                            <label for="mobile-cart-8" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#mobile-detail-9" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682639-7e8f9a0b1c2d?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Phone C">
+                    </a>
+                    <h3><a href="#mobile-detail-9" class="product-title-link">Phone Model C</a></h3>
+                    <p>Phone Model C is a premium phones pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹19,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="mobile-cart-9" class="cart-check" aria-label="Add Phone Model C to cart">
+                            <label for="mobile-cart-9" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#mobile-detail-10" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682649-8f9a0b1c2d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Wireless Charger">
+                    </a>
+                    <h3><a href="#mobile-detail-10" class="product-title-link">Wireless Charger Pad</a></h3>
+                    <p>Wireless Charger Pad is a premium accessories pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹1,599</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="mobile-cart-10" class="cart-check" aria-label="Add Wireless Charger Pad to cart">
+                            <label for="mobile-cart-10" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#mobile-detail-11" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682659-9a0b1c2d3e4f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Bluetooth Speaker 2">
+                    </a>
+                    <h3><a href="#mobile-detail-11" class="product-title-link">Mini Bluetooth Speaker</a></h3>
+                    <p>Mini Bluetooth Speaker is a premium audio pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹1,199</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="mobile-cart-11" class="cart-check" aria-label="Add Mini Bluetooth Speaker to cart">
+                            <label for="mobile-cart-11" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#mobile-detail-12" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682669-0b1c2d3e4f5a?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Car Charger">
+                    </a>
+                    <h3><a href="#mobile-detail-12" class="product-title-link">Dual USB Car Charger</a></h3>
+                    <p>Dual USB Car Charger is a premium accessories pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹499</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="mobile-cart-12" class="cart-check" aria-label="Add Dual USB Car Charger to cart">
+                            <label for="mobile-cart-12" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#mobile-detail-13" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682679-1c2d3e4f5a6b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Selfie Stick">
+                    </a>
+                    <h3><a href="#mobile-detail-13" class="product-title-link">Extendable Selfie Stick</a></h3>
+                    <p>Extendable Selfie Stick is a premium gadgets pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹399</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="mobile-cart-13" class="cart-check" aria-label="Add Extendable Selfie Stick to cart">
+                            <label for="mobile-cart-13" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#mobile-detail-14" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682689-2d3e4f5a6b7c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Camera Lens">
+                    </a>
+                    <h3><a href="#mobile-detail-14" class="product-title-link">Mobile Camera Lens Kit</a></h3>
+                    <p>Mobile Camera Lens Kit is a premium photography pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹1,299</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="mobile-cart-14" class="cart-check" aria-label="Add Mobile Camera Lens Kit to cart">
+                            <label for="mobile-cart-14" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#mobile-detail-15" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682699-3e4f5a6b7c8d?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Phone Stand">
+                    </a>
+                    <h3><a href="#mobile-detail-15" class="product-title-link">Adjustable Phone Stand</a></h3>
+                    <p>Adjustable Phone Stand is a premium accessories pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹299</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="mobile-cart-15" class="cart-check" aria-label="Add Adjustable Phone Stand to cart">
+                            <label for="mobile-cart-15" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="market-footer">
+        <p>© 2026 NexaNest Store — Mobiles Collection</p>
+    </footer>
+
+    <!-- Pure CSS Secure Checkout Modal -->
+    <div id="checkout-modal" class="market-modal" aria-hidden="true">
+        <a href="#" class="market-modal-overlay" aria-label="Close checkout"></a>
+        <div class="market-modal-card checkout-modal-card">
+            <a href="#" class="market-modal-close" aria-label="Close checkout"><i class="fa-solid fa-xmark"></i></a>
+            
+            <input type="checkbox" id="checkout-success-toggle" class="checkout-success-toggle">
+            
+            <div class="checkout-form-view">
+                <h2>Secure Checkout</h2>
+                <p class="checkout-sub">Enter your details to complete your purchase.</p>
+                <form class="checkout-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="co-name">Full Name</label>
+                        <input type="text" id="co-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="co-address">Shipping Address</label>
+                        <input type="text" id="co-address" placeholder="123 Main St, City" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="co-payment">Card Number</label>
+                        <input type="text" id="co-payment" placeholder="1111-2222-3333-4444" required>
+                    </div>
+                    <label for="checkout-success-toggle" class="checkout-submit-btn">Place Order</label>
+                </form>
+            </div>
+            
+            <div class="checkout-success-view">
+                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h2>Order Confirmed!</h2>
+                <p>Your order has been successfully placed. Thank you for choosing NexaNest!</p>
+                <a href="#" class="checkout-done-btn">Done</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="modal-scroll-fix.js"></script>
+    <script src="cart.js" defer></script>
+</body>
+</html>

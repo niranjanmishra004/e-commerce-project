@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaNest Store — Women&#x27;s Collection</title>
+    <meta name="description" content="Women&#x27;s Collection at NexaNest Store with CSS-only cart interactions and product details view.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="market-body category-body">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <aside class="side-drawer">
+        <div class="drawer-head">
+            <h2>Browse Categories</h2>
+            <label for="menu-toggle" class="close-drawer" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="mens.html"><i class="fa-solid fa-shirt"></i> Men</a>
+            <a href="womens.html" class="drawer-active"><i class="fa-solid fa-person-dress"></i> Women</a>
+            <a href="kids.html"><i class="fa-solid fa-child-reaching"></i> Kids</a>
+            <a href="electronics.html"><i class="fa-solid fa-tv"></i> Electronics</a>
+            <a href="mobile.html"><i class="fa-solid fa-mobile-screen-button"></i> Mobiles</a>
+            <a href="furniture.html"><i class="fa-solid fa-couch"></i> Furniture</a>
+        </nav>
+    </aside>
+    <label for="menu-toggle" class="drawer-overlay"></label>
+
+    <header class="market-topbar">
+        <div class="topbar-left">
+            <label for="menu-toggle" class="menu-icon" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <a href="index.html" class="brand-logo">NexaNest</a>
+        </div>
+        <div class="topbar-search">
+            <input type="text" placeholder="Search women&#x27;s collection">
+            <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="topbar-right">
+            <a href="account.html"><i class="fa-solid fa-user"></i> Account</a>
+            <a href="#category-products" class="cart-link"><i class="fa-solid fa-cart-shopping"></i> Cart <span class="cart-badge" aria-hidden="true"></span></a>
+        </div>
+    </header>
+
+    <main class="market-main">
+        <section class="category-hero">
+            <p class="promo-tag">NexaNest Women Edit</p>
+            <h1>Women&#x27;s Collection</h1>
+            <p>Refined styles designed for comfort, elegance and versatility.</p>
+        </section>
+
+        <section class="quick-categories">
+            <a href="mens.html">Men</a>
+            <a href="womens.html" class="quick-active">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="electronics.html">Electronics</a>
+            <a href="mobile.html">Mobiles</a>
+            <a href="furniture.html">Furniture</a>
+        </section>
+
+        <section class="featured-products" id="category-products">
+            <div class="section-head">
+                <h2>Shop Women&#x27;s Collection</h2>
+                <a href="index.html">Back to Home</a>
+            </div>
+
+            <div class="market-grid category-grid">
+                <article class="market-card">
+                    <a href="#womens-detail-1" class="product-media-link">
+                        <img src="https://www.vastranand.in/cdn/shop/files/1_f3663edc-d825-480e-a174-204371031c1d.jpg?v=1743078765&width=1000" alt="Silk Blouse">
+                    </a>
+                    <h3><a href="#womens-detail-1" class="product-title-link">Saree</a></h3>
+                    <p>A premium tops pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹2,499</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="womens-cart-1" class="cart-check" aria-label="Add Silk Blouse to cart">
+                            <label for="womens-cart-1" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#womens-detail-2" class="product-media-link">
+                        <img src="https://m.media-amazon.com/images/I/71xAF8PkWPL._AC_UY1100_.jpg" alt="Midi Dress">
+                    </a>
+                    <h3><a href="#womens-detail-2" class="product-title-link">Silhouette Midi Dress</a></h3>
+                    <p>Silhouette Midi Dress is a premium dresses pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹3,199</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="womens-cart-2" class="cart-check" aria-label="Add Silhouette Midi Dress to cart">
+                            <label for="womens-cart-2" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#womens-detail-3" class="product-media-link">
+                        <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/c/3/c305cd34357DGREY_1.jpg?rnd=20200526195200&tr=w-512" alt="Tailored Coat">
+                    </a>
+                    <h3><a href="#womens-detail-3" class="product-title-link">Tailored Coat</a></h3>
+                    <p>Tailored Coat is a premium outerwear pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹5,499</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="womens-cart-3" class="cart-check" aria-label="Add Tailored Coat to cart">
+                            <label for="womens-cart-3" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#womens-detail-4" class="product-media-link">
+                        <img src="https://www.reddress.com/cdn/shop/files/Full-View-Dusty-Blue-Pleated-Midi-Skirt.jpg?v=1758724443&width=1365" alt="Pleated Skirt">
+                    </a>
+                    <h3><a href="#womens-detail-4" class="product-title-link">Pleated Midi Skirt</a></h3>
+                    <p>Pleated Midi Skirt is a premium bottoms pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹1,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="womens-cart-4" class="cart-check" aria-label="Add Pleated Midi Skirt to cart">
+                            <label for="womens-cart-4" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#womens-detail-5" class="product-media-link">
+                        <img src="https://www.gorsuch.com/cdn/shop/files/ALP07_HABS_KOLBENTURN_CAP_312-633-0217-taupe-m.jpg?v=1721061872&width=1500" alt="Cashmere Cardigan">
+                    </a>
+                    <h3><a href="#womens-detail-5" class="product-title-link">Cashmere Cardigan</a></h3>
+                    <p>Cashmere Cardigan is a premium knitwear pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹4,299</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="womens-cart-5" class="cart-check" aria-label="Add Cashmere Cardigan to cart">
+                            <label for="womens-cart-5" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#womens-detail-6" class="product-media-link">
+                        <img src="https://pashtush.in/cdn/shop/products/pashtush-pashmina-pashtush-women-s-antique-scarf-extra-soft-bamboo-ethnic-kashmiri-weave-17770982572086.jpg?v=1624650960&width=1080" alt="Silk Scarf">
+                    </a>
+                    <h3><a href="#womens-detail-6" class="product-title-link">Scarf</a></h3>
+                    <p>Scarf is a premium accessories pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹1,199</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="womens-cart-6" class="cart-check" aria-label="Add Silk Scarf to cart">
+                            <label for="womens-cart-6" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#womens-detail-7" class="product-media-link">
+                        <img src="https://aarushichawla.in/cdn/shop/files/2-16.jpg?v=1690959616" alt="Mules">
+                    </a>
+                    <h3><a href="#womens-detail-7" class="product-title-link">Mules</a></h3>
+                    <p>Mules is a premium footwear pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹3,299</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="womens-cart-7" class="cart-check" aria-label="Add Leather Mules to cart">
+                            <label for="womens-cart-7" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#womens-detail-8" class="product-media-link">
+                        <img src="https://images.meesho.com/images/products/668710464/vb8tk_512.webp?width=512" alt="Handbag">
+                    </a>
+                    <h3><a href="#womens-detail-8" class="product-title-link">Hand Bag</a></h3>
+                    <p>Bag is a premium bags pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹5,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="womens-cart-8" class="cart-check" aria-label="Add Everyday Leather Bag to cart">
+                            <label for="womens-cart-8" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#womens-detail-9" class="product-media-link">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoSFotyC-B4dfb-PbA0qwrsTvGbHSQMICq95jphDVCGXCjOMXqgpC9L8EV&s=10" alt="Heels">
+                    </a>
+                    <h3><a href="#womens-detail-9" class="product-title-link">Low Block Heels</a></h3>
+                    <p>Low Block Heels is a premium footwear pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹2,699</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="womens-cart-9" class="cart-check" aria-label="Add Low Block Heels to cart">
+                            <label for="womens-cart-9" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#womens-detail-10" class="product-media-link">
+                        <img src="https://emikafashion.com/wp-content/uploads/2023/12/img_3552-js.jpg" alt="Jumpsuit">
+                    </a>
+                    <h3><a href="#womens-detail-10" class="product-title-link">Tailored Jumpsuit</a></h3>
+                    <p>Tailored Jumpsuit is a premium dresses pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹3,499</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="womens-cart-10" class="cart-check" aria-label="Add Tailored Jumpsuit to cart">
+                            <label for="womens-cart-10" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#womens-detail-11" class="product-media-link">
+                        <img src="https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/31734925/2025/1/30/8c9e048e-6268-447d-9e17-1073138ce2a91738219873521-glitchez-Women-Trousers-6351738219872937-1.jpg" alt="Trousers">
+                    </a>
+                    <h3><a href="#womens-detail-11" class="product-title-link">Wide-leg Trousers</a></h3>
+                    <p>Wide-leg Trousers is a premium bottoms pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹2,199</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="womens-cart-11" class="cart-check" aria-label="Add Wide-leg Trousers to cart">
+                            <label for="womens-cart-11" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#womens-detail-12" class="product-media-link">
+                        <img src="https://img.tatacliq.com/images/i22//437Wx649H/MP000000025579610_437Wx649H_202503052102311.jpeg" alt="Jewelry">
+                    </a>
+                    <h3><a href="#womens-detail-12" class="product-title-link">Minimal Gold Necklace</a></h3>
+                    <p>Minimal Gold Necklace is a premium accessories pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹1,799</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="womens-cart-12" class="cart-check" aria-label="Add Minimal Gold Necklace to cart">
+                            <label for="womens-cart-12" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#womens-detail-14" class="product-media-link">
+                        <img src="https://cdn.shopify.com/s/files/1/0275/5690/4995/files/C_M-CAMILLA-AND-MARC-evans-classic-trench-coat-sand-beige-1_1200x1800_crop_center.jpg?v=1770861903" alt="Trench Coat">
+                    </a>
+                    <h3><a href="#womens-detail-14" class="product-title-link">Classic Trench Coat</a></h3>
+                    <p>Classic Trench Coat is a premium outerwear pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹6,499</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="womens-cart-14" class="cart-check" aria-label="Add Classic Trench Coat to cart">
+                            <label for="womens-cart-14" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#womens-detail-15" class="product-media-link">
+                        <img src="https://stelway.in/cdn/shop/files/Stelway_EmbellishedBlackBelliesforwomen_6.jpg?v=1727904833" alt="Ballet Flats">
+                    </a>
+                    <h3><a href="#womens-detail-15" class="product-title-link">Leather Ballet Flats</a></h3>
+                    <p>Leather Ballet Flats is a premium footwear pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹1,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="womens-cart-15" class="cart-check" aria-label="Add Leather Ballet Flats to cart">
+                            <label for="womens-cart-15" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="market-footer">
+        <p>© 2026 NexaNest Store — Women&#x27;s Collection</p>
+    </footer>
+
+    <!-- Pure CSS Secure Checkout Modal -->
+    <div id="checkout-modal" class="market-modal" aria-hidden="true">
+        <a href="#" class="market-modal-overlay" aria-label="Close checkout"></a>
+        <div class="market-modal-card checkout-modal-card">
+            <a href="#" class="market-modal-close" aria-label="Close checkout"><i class="fa-solid fa-xmark"></i></a>
+            
+            <input type="checkbox" id="checkout-success-toggle" class="checkout-success-toggle">
+            
+            <div class="checkout-form-view">
+                <h2>Secure Checkout</h2>
+                <p class="checkout-sub">Enter your details to complete your purchase.</p>
+                <form class="checkout-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="co-name">Full Name</label>
+                        <input type="text" id="co-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="co-address">Shipping Address</label>
+                        <input type="text" id="co-address" placeholder="123 Main St, City" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="co-payment">Card Number</label>
+                        <input type="text" id="co-payment" placeholder="1111-2222-3333-4444" required>
+                    </div>
+                    <label for="checkout-success-toggle" class="checkout-submit-btn">Place Order</label>
+                </form>
+            </div>
+            
+            <div class="checkout-success-view">
+                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h2>Order Confirmed!</h2>
+                <p>Your order has been successfully placed. Thank you for choosing NexaNest!</p>
+                <a href="#" class="checkout-done-btn">Done</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="modal-scroll-fix.js"></script>
+    <script src="cart.js" defer></script>
+</body>
+</html>

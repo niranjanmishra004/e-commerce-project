@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaNest Store — My Account</title>
+    <meta name="description" content="Manage your NexaNest Account, view order status and update settings.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Account Page Specific Styles */
+        body{background:linear-gradient(180deg,#f8fafc,#eef2f7)}
+        .auth-section {
+            padding: 2.5rem 0;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .auth-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+        .auth-card {
+            background: #ffffff;
+            border: 1px solid #e6eef0;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 14px 36px rgba(2,6,23,0.06);
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+        }
+        .auth-card:hover {
+            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.08);
+        }
+        .auth-card h2 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+        .auth-card p.subtitle {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 1.8rem;
+        }
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #e6eef0;
+            background: #fff;
+            color: #0f172a;
+            font-weight: 700;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.14s;
+            font-size: 0.95rem;
+            font-family: inherit;
+        }
+        .social-btn:hover {
+            background: #f8fafc;
+            border-color: #94a3b8;
+        }
+        .social-btn img {
+            width: 18px;
+            height: 18px;
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 1.5rem 0;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .divider:not(:empty)::before {
+            margin-right: .75em;
+        }
+        .divider:not(:empty)::after {
+            margin-left: .75em;
+        }
+        .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .input-group label {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #475569;
+        }
+        .input-group input {
+            padding: 0.75rem 0.9rem;
+            border: 1px solid #e6eef0;
+            border-radius: 10px;
+            outline: none;
+            font-size: 0.95rem;
+            transition: border-color 0.14s, box-shadow 0.14s;
+            font-family: inherit;
+        }
+        .input-group input:focus {
+            border-color: #14b8a6;
+            box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.12);
+        }
+        .checkbox-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+        }
+        .checkbox-row label {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: #475569;
+            cursor: pointer;
+        }
+        .forgot-link {
+            color: #14b8a6;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .forgot-link:hover {
+            text-decoration: underline;
+        }
+        .auth-submit-btn {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #ffffff;
+            font-weight: 700;
+            border: none;
+            padding: 0.85rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.14s;
+            font-size: 0.95rem;
+            font-family: inherit;
+        }
+        .auth-submit-btn:hover { transform: translateY(-2px); }
+        .signup-submit-btn {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        /* Dashboard View */
+        .dashboard-container {
+            display: none;
+            background: #ffffff;
+            border: 1px solid #e6eef0;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 14px 36px rgba(2,6,23,0.06);
+            max-width: 920px;
+            margin: 0 auto;
+        }
+        .dashboard-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #f1f5f9;
+            margin-bottom: 2rem;
+        }
+        .avatar {
+            width: 84px;
+            height: 84px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #10b981, #3b82f6);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+        .profile-info h3 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0 0 0.25rem;
+        }
+        .profile-info p {
+            color: #64748b;
+            font-size: 0.92rem;
+            margin: 0;
+        }
+        .dashboard-content h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0 0 1rem;
+        }
+        .orders-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+        }
+        .orders-table th, .orders-table td {
+            padding: 0.85rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .orders-table th {
+            font-weight: 600;
+            color: #475569;
+            background: #f8fafc;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .status-delivered {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        .status-pending {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        .logout-btn {
+            margin-top: 1.5rem;
+            background: #ef4444;
+            color: #ffffff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.14s, transform 0.14s;
+            font-family: inherit;
+        }
+        .logout-btn:hover { background:#dc2626; transform:translateY(-2px) }
+
+        @media (max-width: 900px) {
+            .auth-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="market-body">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <aside class="side-drawer">
+        <div class="drawer-head">
+            <h2>Browse Categories</h2>
+            <label for="menu-toggle" class="close-drawer" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="mens.html"><i class="fa-solid fa-shirt"></i> Men</a>
+            <a href="womens.html"><i class="fa-solid fa-person-dress"></i> Women</a>
+            <a href="kids.html"><i class="fa-solid fa-child-reaching"></i> Kids</a>
+            <a href="electronics.html"><i class="fa-solid fa-tv"></i> Electronics</a>
+            <a href="mobile.html"><i class="fa-solid fa-mobile-screen-button"></i> Mobiles</a>
+            <a href="furniture.html"><i class="fa-solid fa-couch"></i> Furniture</a>
+        </nav>
+    </aside>
+    <label for="menu-toggle" class="drawer-overlay"></label>
+
+    <header class="market-topbar">
+        <div class="topbar-left">
+            <label for="menu-toggle" class="menu-icon" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <a href="index.html" class="brand-logo">NexaNest</a>
+        </div>
+        <div class="topbar-search">
+            <input type="text" placeholder="Search products, brands and more">
+            <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="topbar-right">
+            <a href="account.html" class="account-active"><i class="fa-solid fa-user"></i> Account</a>
+            <a href="#" class="cart-link"><i class="fa-solid fa-cart-shopping"></i> Cart <span class="cart-badge" aria-hidden="true"></span></a>
+        </div>
+    </header>
+
+    <main class="market-main">
+        <section class="auth-section">
+            <!-- Auth Grid (Sign In on left, Sign Up on right) -->
+            <div class="auth-grid" id="authGrid">
+                
+                <!-- Left panel: Sign In -->
+                <div class="auth-card" id="signinCard">
+                    <h2>Welcome Back</h2>
+                    <p class="subtitle">Log in to track orders and manage details.</p>
+                    
+                    <button class="social-btn" id="googleSigninBtn">
+                        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo">
+                        Sign In with Google
+                    </button>
+                    
+                    <div class="divider">or sign in with email</div>
+                    
+                    <form class="auth-form" id="signinForm" onsubmit="return false;">
+                        <div class="input-group">
+                            <label for="signinEmail">Email Address</label>
+                            <input type="email" id="signinEmail" placeholder="yourname@example.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="signinPassword">Password</label>
+                            <input type="password" id="signinPassword" placeholder="••••••••" required>
+                        </div>
+                        <div class="checkbox-row">
+                            <label><input type="checkbox"> Remember me</label>
+                            <a href="#" class="forgot-link">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="auth-submit-btn">Sign In</button>
+                    </form>
+                </div>
+                
+                <!-- Right panel: Sign Up -->
+                <div class="auth-card" id="signupCard">
+                    <h2>Create Account</h2>
+                    <p class="subtitle">Join today to get exclusive members-only deals.</p>
+                    
+                    <button class="social-btn" id="googleSignupBtn">
+                        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo">
+                        Sign Up with Google
+                    </button>
+                    
+                    <div class="divider">or sign up with email</div>
+                    
+                    <form class="auth-form" id="signupForm" onsubmit="return false;">
+                        <div class="input-group">
+                            <label for="signupName">Full Name</label>
+                            <input type="text" id="signupName" placeholder="John Doe" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="signupEmail">Email Address</label>
+                            <input type="email" id="signupEmail" placeholder="john.doe@example.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" placeholder="Min 6 characters" required minlength="6">
+                        </div>
+                        <div class="input-group">
+                            <label for="signupConfirmPassword">Confirm Password</label>
+                            <input type="password" id="signupConfirmPassword" placeholder="••••••••" required>
+                        </div>
+                        <button type="submit" class="auth-submit-btn signup-submit-btn">Sign Up</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Dashboard View (Shown when logged in) -->
+            <div class="dashboard-container" id="dashboardView">
+                <div class="dashboard-header">
+                    <div class="avatar" id="userAvatar">U</div>
+                    <div class="profile-info">
+                        <h3 id="userName">User Name</h3>
+                        <p id="userEmail">user@example.com</p>
+                    </div>
+                </div>
+                <div class="dashboard-content">
+                    <h4>Your Recent Orders</h4>
+                    <div style="overflow-x: auto;">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#NN-782910</td>
+                                    <td>June 09, 2026</td>
+                                    <td>₹2,999</td>
+                                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#NN-783542</td>
+                                    <td>June 10, 2026</td>
+                                    <td>₹899</td>
+                                    <td><span class="status-badge status-pending">Processing</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="logout-btn" id="logoutBtn">Sign Out</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="market-footer">
+        <p>© 2026 NexaNest Store — My Account</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="modal-scroll-fix.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Redirect to signin if not authenticated
+            const user = window.NexaNestAuth && window.NexaNestAuth.getActiveUser ? window.NexaNestAuth.getActiveUser() : null;
+            if (!user) {
+                window.location.href = 'signin.html';
+                return;
+            }
+
+            const userNameEl = document.getElementById('userName');
+            const userEmailEl = document.getElementById('userEmail');
+            const userAvatarEl = document.getElementById('userAvatar');
+            const dashboardView = document.getElementById('dashboardView');
+            const logoutBtn = document.getElementById('logoutBtn');
+
+            userNameEl.textContent = user.name || 'User';
+            userEmailEl.textContent = user.email || '';
+            userAvatarEl.textContent = (user.name || 'U').trim().charAt(0).toUpperCase();
+
+            dashboardView.style.display = 'block';
+
+            logoutBtn.addEventListener('click', () => {
+                if (window.NexaNestAuth && window.NexaNestAuth.signOutUser) {
+                    window.NexaNestAuth.signOutUser();
+                }
+                if (window.showToast) window.showToast('Signed out');
+                window.location.href = 'signin.html';
+            });
+
+            if (window.updateHeaderAccountGreeting) updateHeaderAccountGreeting();
+        });
+    </script>
+</body>
+</html>

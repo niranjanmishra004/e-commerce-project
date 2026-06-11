@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up — NexaNest</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root{--accent:#0ea5a4}
+        body{background:linear-gradient(180deg,#fbfdff,#f7fafc)}
+        .signup-wrapper{ max-width:820px; margin:3.5rem auto; padding:0 1rem }
+        .auth-card { background:#fff; border:1px solid #e6eef0; padding:2.25rem; border-radius:14px; box-shadow:0 12px 28px rgba(2,6,23,0.06); }
+        .input-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+        .input-group input{ padding:0.75rem; border-radius:10px; border:1px solid #e6eef0 }
+        .auth-submit-btn{ padding:0.85rem 1.1rem; border-radius:10px; }
+        .signup-submit-btn{ background:linear-gradient(135deg,var(--accent),#0b9488); color:#fff; border:none }
+        @media (max-width:900px){ .input-grid{ grid-template-columns:1fr; } }
+    </style>
+</head>
+<body class="market-body">
+    <header class="market-topbar">
+        <div class="topbar-left"><a href="index.html" class="brand-logo">NexaNest</a></div>
+        <div class="topbar-right">
+            <a href="signin.html"><i class="fa-solid fa-user"></i> Account</a>
+            <a href="#" class="cart-link"><i class="fa-solid fa-cart-shopping"></i> Cart <span class="cart-badge" aria-hidden="true"></span></a>
+        </div>
+    </header>
+
+    <main class="market-main">
+        <section class="signup-wrapper">
+            <div class="auth-card">
+                <h2>Create Your Account</h2>
+                <p style="color:#64748b">Fill in the details to create your NexaNest account.</p>
+
+                <form id="signupForm" onsubmit="return false;" style="margin-top:1rem">
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label for="fullName">Full Name</label>
+                            <input id="fullName" type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email Address</label>
+                            <input id="email" type="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="phone">Phone Number</label>
+                            <input id="phone" type="tel" placeholder="10 digits" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="pincode">Pincode</label>
+                            <input id="pincode" type="text" placeholder="6 digits" required>
+                        </div>
+                        <div class="input-group" style="grid-column:1 / -1">
+                            <label for="address">Address</label>
+                            <input id="address" type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input id="password" type="password" required minlength="6">
+                        </div>
+                        <div class="input-group">
+                            <label for="confirm">Confirm Password</label>
+                            <input id="confirm" type="password" required>
+                        </div>
+                    </div>
+                    <div style="margin-top:1rem; display:flex; gap:0.75rem;">
+                        <button type="submit" class="auth-submit-btn signup-submit-btn">Sign Up</button>
+                        <a href="signin.html" class="small-link" style="align-self:center">Have an account? Sign in</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="market-footer"><p>© 2026 NexaNest Store</p></footer>
+
+    <script src="modal-scroll-fix.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('signupForm');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const payload = {
+                    name: document.getElementById('fullName').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    address: document.getElementById('address').value,
+                    pincode: document.getElementById('pincode').value,
+                    password: document.getElementById('password').value
+                };
+
+                if (payload.password !== document.getElementById('confirm').value) {
+                    if (window.showToast) window.showToast('Passwords do not match', 'error');
+                    return;
+                }
+
+                const res = window.NexaNestAuth.registerUser(payload);
+                if (!res.ok) {
+                    const firstErr = Object.values(res.errors)[0] || 'Registration failed';
+                    if (window.showToast) window.showToast(firstErr, 'error');
+                    return;
+                }
+
+                if (window.showToast) window.showToast('Registration successful');
+                window.location.href = 'index.html';
+            });
+
+            if (window.updateHeaderAccountGreeting) updateHeaderAccountGreeting();
+        });
+    </script>
+</body>
+</html>

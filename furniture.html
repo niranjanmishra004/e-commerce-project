@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaNest Store — Furniture Collection</title>
+    <meta name="description" content="Furniture Collection at NexaNest Store with CSS-only cart interactions and product details view.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="market-body category-body">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <aside class="side-drawer">
+        <div class="drawer-head">
+            <h2>Browse Categories</h2>
+            <label for="menu-toggle" class="close-drawer" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="mens.html"><i class="fa-solid fa-shirt"></i> Men</a>
+            <a href="womens.html"><i class="fa-solid fa-person-dress"></i> Women</a>
+            <a href="kids.html"><i class="fa-solid fa-child-reaching"></i> Kids</a>
+            <a href="electronics.html"><i class="fa-solid fa-tv"></i> Electronics</a>
+            <a href="mobile.html"><i class="fa-solid fa-mobile-screen-button"></i> Mobiles</a>
+            <a href="furniture.html" class="drawer-active"><i class="fa-solid fa-couch"></i> Furniture</a>
+        </nav>
+    </aside>
+    <label for="menu-toggle" class="drawer-overlay"></label>
+
+    <header class="market-topbar">
+        <div class="topbar-left">
+            <label for="menu-toggle" class="menu-icon" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <a href="index.html" class="brand-logo">NexaNest</a>
+        </div>
+        <div class="topbar-search">
+            <input type="text" placeholder="Search furniture collection">
+            <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="topbar-right">
+            <a href="#"><i class="fa-solid fa-user"></i> Account</a>
+            <a href="#category-products" class="cart-link"><i class="fa-solid fa-cart-shopping"></i> Cart <span class="cart-badge" aria-hidden="true"></span></a>
+        </div>
+    </header>
+
+    <main class="market-main">
+        <section class="category-hero">
+            <p class="promo-tag">NexaNest Furniture</p>
+            <h1>Furniture Collection</h1>
+            <p>Modern furniture that blends comfort, quality and function.</p>
+        </section>
+
+        <section class="quick-categories">
+            <a href="mens.html">Men</a>
+            <a href="womens.html">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="electronics.html">Electronics</a>
+            <a href="mobile.html">Mobiles</a>
+            <a href="furniture.html" class="quick-active">Furniture</a>
+        </section>
+
+        <section class="featured-products" id="category-products">
+            <div class="section-head">
+                <h2>Shop Furniture Collection</h2>
+                <a href="index.html">Back to Home</a>
+            </div>
+
+            <div class="market-grid category-grid">
+                <article class="market-card">
+                    <a href="#furniture-detail-1" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1550583724-b269a01e28b9?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Sofa">
+                    </a>
+                    <h3><a href="#furniture-detail-1" class="product-title-link">Two-seater Sofa</a></h3>
+                    <p>Two-seater Sofa is a premium living pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹29,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="furniture-cart-1" class="cart-check" aria-label="Add Two-seater Sofa to cart">
+                            <label for="furniture-cart-1" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#furniture-detail-2" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1549187774-b4e9a6ef0a8d?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Chair">
+                    </a>
+                    <h3><a href="#furniture-detail-2" class="product-title-link">Dining Chair (Set)</a></h3>
+                    <p>Dining Chair (Set) is a premium seating pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹9,499</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="furniture-cart-2" class="cart-check" aria-label="Add Dining Chair (Set) to cart">
+                            <label for="furniture-cart-2" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#furniture-detail-3" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Table">
+                    </a>
+                    <h3><a href="#furniture-detail-3" class="product-title-link">Oak Coffee Table</a></h3>
+                    <p>Oak Coffee Table is a premium tables pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹7,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="furniture-cart-3" class="cart-check" aria-label="Add Oak Coffee Table to cart">
+                            <label for="furniture-cart-3" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#furniture-detail-4" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Bookshelf">
+                    </a>
+                    <h3><a href="#furniture-detail-4" class="product-title-link">Minimal Bookshelf</a></h3>
+                    <p>Minimal Bookshelf is a premium storage pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹12,499</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="furniture-cart-4" class="cart-check" aria-label="Add Minimal Bookshelf to cart">
+                            <label for="furniture-cart-4" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#furniture-detail-5" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Bed">
+                    </a>
+                    <h3><a href="#furniture-detail-5" class="product-title-link">Platform Bed Frame</a></h3>
+                    <p>Platform Bed Frame is a premium bedroom pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹24,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="furniture-cart-5" class="cart-check" aria-label="Add Platform Bed Frame to cart">
+                            <label for="furniture-cart-5" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#furniture-detail-6" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1540574163026-1234567890ab?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Lamp">
+                    </a>
+                    <h3><a href="#furniture-detail-6" class="product-title-link">Floor Lamp</a></h3>
+                    <p>Floor Lamp is a premium lighting pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹3,499</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="furniture-cart-6" class="cart-check" aria-label="Add Floor Lamp to cart">
+                            <label for="furniture-cart-6" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#furniture-detail-7" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1549187774-4567890abcdef?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Stool">
+                    </a>
+                    <h3><a href="#furniture-detail-7" class="product-title-link">Wooden Stool</a></h3>
+                    <p>Wooden Stool is a premium seating pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹1,499</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="furniture-cart-7" class="cart-check" aria-label="Add Wooden Stool to cart">
+                            <label for="furniture-cart-7" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#furniture-detail-8" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1540574163026-0a1b2c3d4e5f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Side Table">
+                    </a>
+                    <h3><a href="#furniture-detail-8" class="product-title-link">Marble Side Table</a></h3>
+                    <p>Marble Side Table is a premium tables pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹4,299</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="furniture-cart-8" class="cart-check" aria-label="Add Marble Side Table to cart">
+                            <label for="furniture-cart-8" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#furniture-detail-9" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1540574163026-1a2b3c4d5e6f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Wardrobe">
+                    </a>
+                    <h3><a href="#furniture-detail-9" class="product-title-link">Sliding Door Wardrobe</a></h3>
+                    <p>Sliding Door Wardrobe is a premium storage pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹34,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="furniture-cart-9" class="cart-check" aria-label="Add Sliding Door Wardrobe to cart">
+                            <label for="furniture-cart-9" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#furniture-detail-10" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1540574163026-2b3c4d5e6f7a?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Console">
+                    </a>
+                    <h3><a href="#furniture-detail-10" class="product-title-link">Console Table</a></h3>
+                    <p>Console Table is a premium entry pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹6,299</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="furniture-cart-10" class="cart-check" aria-label="Add Console Table to cart">
+                            <label for="furniture-cart-10" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#furniture-detail-11" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1540574163026-3c4d5e6f7a8b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Dresser">
+                    </a>
+                    <h3><a href="#furniture-detail-11" class="product-title-link">Minimal Dresser</a></h3>
+                    <p>Minimal Dresser is a premium bedroom pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹10,499</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="furniture-cart-11" class="cart-check" aria-label="Add Minimal Dresser to cart">
+                            <label for="furniture-cart-11" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#furniture-detail-12" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1540574163026-4d5e6f7a8b9c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Rug">
+                    </a>
+                    <h3><a href="#furniture-detail-12" class="product-title-link">Wool Area Rug</a></h3>
+                    <p>Wool Area Rug is a premium textiles pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹7,499</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="furniture-cart-12" class="cart-check" aria-label="Add Wool Area Rug to cart">
+                            <label for="furniture-cart-12" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#furniture-detail-13" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1540574163026-5e6f7a8b9c0d?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Accent Chair">
+                    </a>
+                    <h3><a href="#furniture-detail-13" class="product-title-link">Accent Chair</a></h3>
+                    <p>Accent Chair is a premium seating pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹8,299</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="furniture-cart-13" class="cart-check" aria-label="Add Accent Chair to cart">
+                            <label for="furniture-cart-13" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#furniture-detail-14" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1540574163026-6f7a8b9c0d1e?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Ottoman">
+                    </a>
+                    <h3><a href="#furniture-detail-14" class="product-title-link">Leather Ottoman</a></h3>
+                    <p>Leather Ottoman is a premium seating pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹3,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="furniture-cart-14" class="cart-check" aria-label="Add Leather Ottoman to cart">
+                            <label for="furniture-cart-14" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#furniture-detail-15" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1540574163026-7a8b9c0d1e2f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Desk">
+                    </a>
+                    <h3><a href="#furniture-detail-15" class="product-title-link">Minimal Desk</a></h3>
+                    <p>Minimal Desk is a premium workspace pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹6,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="furniture-cart-15" class="cart-check" aria-label="Add Minimal Desk to cart">
+                            <label for="furniture-cart-15" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="market-footer">
+        <p>© 2026 NexaNest Store — Furniture Collection</p>
+    </footer>
+
+    <!-- Pure CSS Secure Checkout Modal -->
+    <div id="checkout-modal" class="market-modal" aria-hidden="true">
+        <a href="#" class="market-modal-overlay" aria-label="Close checkout"></a>
+        <div class="market-modal-card checkout-modal-card">
+            <a href="#" class="market-modal-close" aria-label="Close checkout"><i class="fa-solid fa-xmark"></i></a>
+            
+            <input type="checkbox" id="checkout-success-toggle" class="checkout-success-toggle">
+            
+            <div class="checkout-form-view">
+                <h2>Secure Checkout</h2>
+                <p class="checkout-sub">Enter your details to complete your purchase.</p>
+                <form class="checkout-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="co-name">Full Name</label>
+                        <input type="text" id="co-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="co-address">Shipping Address</label>
+                        <input type="text" id="co-address" placeholder="123 Main St, City" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="co-payment">Card Number</label>
+                        <input type="text" id="co-payment" placeholder="1111-2222-3333-4444" required>
+                    </div>
+                    <label for="checkout-success-toggle" class="checkout-submit-btn">Place Order</label>
+                </form>
+            </div>
+            
+            <div class="checkout-success-view">
+                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h2>Order Confirmed!</h2>
+                <p>Your order has been successfully placed. Thank you for choosing NexaNest!</p>
+                <a href="#" class="checkout-done-btn">Done</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="modal-scroll-fix.js"></script>
+    <script src="cart.js" defer></script>
+</body>
+</html>

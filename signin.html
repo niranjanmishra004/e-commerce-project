@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In — NexaNest</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root{--bg1:#0f172a;--accent:#14b8a6;--card:#ffffff}
+        body{background:linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%)}
+        .auth-layout { max-width: 980px; margin: 3.5rem auto; display: grid; grid-template-columns: 1fr 420px; gap: 2rem; align-items:stretch; }
+        .auth-card { background:var(--card); border:1px solid #e6eef0; padding:2rem; border-radius:14px; box-shadow:0 10px 30px rgba(2,6,23,0.06); }
+        .auth-cta { display:flex; align-items:center; justify-content:center; height:100%; flex-direction:column; gap:1rem; background:linear-gradient(135deg,#ecfeff,#f0fdf4); border-radius:14px; padding:2rem; }
+        .auth-cta h2{font-size:1.6rem;margin:0;color:var(--bg1)}
+        .small-link{ color:var(--accent); text-decoration:none; font-weight:700 }
+        .social-btn{ border-radius:12px; padding:0.85rem; border:1px solid #e6eef0; background:#fff; display:flex; gap:0.6rem; align-items:center; justify-content:center }
+        .auth-form .input-group input{ padding:0.75rem 0.9rem; border-radius:10px; border:1px solid #e6eef0 }
+        .auth-submit-btn{ background:linear-gradient(135deg,var(--bg1),#1e293b); color:#fff; padding:0.85rem; border-radius:10px; border:none; font-weight:700 }
+        .divider{ color:#94a3b8 }
+        @media (max-width:900px){ .auth-layout{ grid-template-columns:1fr; padding:0 1rem } .auth-cta{ order:-1 } }
+    </style>
+</head>
+<body class="market-body">
+    <header class="market-topbar">
+        <div class="topbar-left">
+            <a href="index.html" class="brand-logo">NexaNest</a>
+        </div>
+        <div class="topbar-right">
+            <a href="signin.html"><i class="fa-solid fa-user"></i> Account</a>
+            <a href="#" class="cart-link"><i class="fa-solid fa-cart-shopping"></i> Cart <span class="cart-badge" aria-hidden="true"></span></a>
+        </div>
+    </header>
+
+    <main class="market-main">
+        <section class="auth-section">
+            <div class="auth-layout">
+                <div class="auth-card">
+                    <h2>Sign In</h2>
+                    <p style="color:#64748b">Access your account to manage orders and settings.</p>
+                    <button id="googleSigninBtn" class="social-btn" style="margin-top:1rem">
+                        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" style="width:18px"> Sign in with Google
+                    </button>
+                    <div class="divider" style="margin:1rem 0">or sign in with email</div>
+                    <form id="signinForm" onsubmit="return false;" class="auth-form">
+                        <div class="input-group">
+                            <label for="email">Email Address</label>
+                            <input id="email" type="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input id="password" type="password" required>
+                        </div>
+                        <button type="submit" class="auth-submit-btn">Sign In</button>
+                    </form>
+                </div>
+
+                <div class="auth-card auth-cta">
+                    <h2>New to NexaNest?</h2>
+                    <p style="color:#64748b; text-align:center; max-width:320px">Create an account to track orders, save addresses and checkout faster.</p>
+                    <a href="signup.html" class="auth-submit-btn signup-submit-btn" style="width:160px; text-align:center; display:inline-block">Sign Up</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="market-footer"><p>© 2026 NexaNest Store</p></footer>
+
+    <script src="modal-scroll-fix.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const signinForm = document.getElementById('signinForm');
+            const googleBtn = document.getElementById('googleSigninBtn');
+
+            signinForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const res = window.NexaNestAuth.signInWithEmail(email, password);
+                if (res.ok) {
+                    window.showToast('Signed in successfully.');
+                    window.location.href = 'index.html';
+                } else {
+                    window.showToast(res.message || 'Sign in failed.', 'error');
+                }
+            });
+
+            googleBtn.addEventListener('click', () => {
+                const res = window.NexaNestAuth.signInWithGoogle();
+                if (res.ok) {
+                    window.showToast('Signed in with Google');
+                    window.location.href = 'index.html';
+                } else {
+                    window.showToast('Google sign-in failed', 'error');
+                }
+            });
+
+            if (window.updateHeaderAccountGreeting) updateHeaderAccountGreeting();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaNest Store — Kids Collection</title>
+    <meta name="description" content="Kids Collection at NexaNest Store with CSS-only cart interactions and product details view.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="market-body category-body">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <aside class="side-drawer">
+        <div class="drawer-head">
+            <h2>Browse Categories</h2>
+            <label for="menu-toggle" class="close-drawer" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="mens.html"><i class="fa-solid fa-shirt"></i> Men</a>
+            <a href="womens.html"><i class="fa-solid fa-person-dress"></i> Women</a>
+            <a href="kids.html" class="drawer-active"><i class="fa-solid fa-child-reaching"></i> Kids</a>
+            <a href="electronics.html"><i class="fa-solid fa-tv"></i> Electronics</a>
+            <a href="mobile.html"><i class="fa-solid fa-mobile-screen-button"></i> Mobiles</a>
+            <a href="furniture.html"><i class="fa-solid fa-couch"></i> Furniture</a>
+        </nav>
+    </aside>
+    <label for="menu-toggle" class="drawer-overlay"></label>
+
+    <header class="market-topbar">
+        <div class="topbar-left">
+            <label for="menu-toggle" class="menu-icon" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <a href="index.html" class="brand-logo">NexaNest</a>
+        </div>
+        <div class="topbar-search">
+            <input type="text" placeholder="Search kids collection">
+            <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="topbar-right">
+            <a href="account.html"><i class="fa-solid fa-user"></i> Account</a>
+            <a href="#category-products" class="cart-link"><i class="fa-solid fa-cart-shopping"></i> Cart <span class="cart-badge" aria-hidden="true"></span></a>
+        </div>
+    </header>
+
+    <main class="market-main">
+        <section class="category-hero">
+            <p class="promo-tag">NexaNest Kids Picks</p>
+            <h1>Kids Collection</h1>
+            <p>Play-ready picks that are soft, durable and easy to wear.</p>
+        </section>
+
+        <section class="quick-categories">
+            <a href="mens.html">Men</a>
+            <a href="womens.html">Women</a>
+            <a href="kids.html" class="quick-active">Kids</a>
+            <a href="electronics.html">Electronics</a>
+            <a href="mobile.html">Mobiles</a>
+            <a href="furniture.html">Furniture</a>
+        </section>
+
+        <section class="featured-products" id="category-products">
+            <div class="section-head">
+                <h2>Shop Kids Collection</h2>
+                <a href="index.html">Back to Home</a>
+            </div>
+
+            <div class="market-grid category-grid">
+                <article class="market-card">
+                    <a href="#kids-detail-1" class="product-media-link">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZZcCUKAQZJzHrBZMcmjsAY3yrzVZI7v1jarENqt0C3vaWiQfS4KgTz-JH&s=10" alt="Kids Tee">
+                    </a>
+                    <h3><a href="#kids-detail-1" class="product-title-link">Soft Cotton Tee</a></h3>
+                    <p>Soft Cotton Tee is a premium tops pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹499</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="kids-cart-1" class="cart-check" aria-label="Add Soft Cotton Tee to cart">
+                            <label for="kids-cart-1" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#kids-detail-2" class="product-media-link">
+                        <img src="https://m.media-amazon.com/images/I/51WAR5piHqL._AC_UY1000_.jpg" alt="Kids Hoodie">
+                    </a>
+                    <h3><a href="#kids-detail-2" class="product-title-link">Cozy Zip Hoodie</a></h3>
+                    <p>Cozy Zip Hoodie is a premium outerwear pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="kids-cart-2" class="cart-check" aria-label="Add Cozy Zip Hoodie to cart">
+                            <label for="kids-cart-2" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#kids-detail-3" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kids Shorts">
+                    </a>
+                    <h3><a href="#kids-detail-3" class="product-title-link">Play Shorts</a></h3>
+                    <p>Play Shorts is a premium bottoms pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹599</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="kids-cart-3" class="cart-check" aria-label="Add Play Shorts to cart">
+                            <label for="kids-cart-3" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#kids-detail-4" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682479-0a5b6f9e4d1f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kids Shoes">
+                    </a>
+                    <h3><a href="#kids-detail-4" class="product-title-link">Everyday Sneakers</a></h3>
+                    <p>Everyday Sneakers is a premium footwear pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹1,199</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="kids-cart-4" class="cart-check" aria-label="Add Everyday Sneakers to cart">
+                            <label for="kids-cart-4" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#kids-detail-5" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kids Dress">
+                    </a>
+                    <h3><a href="#kids-detail-5" class="product-title-link">Play Dress</a></h3>
+                    <p>Play Dress is a premium dresses pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹799</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="kids-cart-5" class="cart-check" aria-label="Add Play Dress to cart">
+                            <label for="kids-cart-5" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#kids-detail-6" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1505250469679-203ad9ced0cb?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Cotton Romper">
+                    </a>
+                    <h3><a href="#kids-detail-6" class="product-title-link">Cotton Romper</a></h3>
+                    <p>Cotton Romper is a premium one-piece pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹699</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="kids-cart-6" class="cart-check" aria-label="Add Cotton Romper to cart">
+                            <label for="kids-cart-6" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#kids-detail-7" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682499-1b4a3c7e6b2a?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kids Jacket">
+                    </a>
+                    <h3><a href="#kids-detail-7" class="product-title-link">Windbreaker Jacket</a></h3>
+                    <p>Windbreaker Jacket is a premium outerwear pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹1,299</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="kids-cart-7" class="cart-check" aria-label="Add Windbreaker Jacket to cart">
+                            <label for="kids-cart-7" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#kids-detail-8" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682506-6c6f8f8e7c1b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kids Hat">
+                    </a>
+                    <h3><a href="#kids-detail-8" class="product-title-link">Sun Hat</a></h3>
+                    <p>Sun Hat is a premium accessories pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹299</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="kids-cart-8" class="cart-check" aria-label="Add Sun Hat to cart">
+                            <label for="kids-cart-8" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#kids-detail-9" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682519-7d7f9e9d8f2f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kids Hoodie 2">
+                    </a>
+                    <h3><a href="#kids-detail-9" class="product-title-link">Graphic Hoodie</a></h3>
+                    <p>Graphic Hoodie is a premium tops pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹899</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="kids-cart-9" class="cart-check" aria-label="Add Graphic Hoodie to cart">
+                            <label for="kids-cart-9" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#kids-detail-10" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682529-8e8f8a8b9c2d?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kids Pyjamas">
+                    </a>
+                    <h3><a href="#kids-detail-10" class="product-title-link">Soft Pajama Set</a></h3>
+                    <p>Soft Pajama Set is a premium sleepwear pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹599</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="kids-cart-10" class="cart-check" aria-label="Add Soft Pajama Set to cart">
+                            <label for="kids-cart-10" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#kids-detail-11" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682539-9f9f9f9a8a3b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kids Leggings">
+                    </a>
+                    <h3><a href="#kids-detail-11" class="product-title-link">Stretch Leggings</a></h3>
+                    <p>Stretch Leggings is a premium bottoms pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹449</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="kids-cart-11" class="cart-check" aria-label="Add Stretch Leggings to cart">
+                            <label for="kids-cart-11" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#kids-detail-12" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682549-0a1b2c3d4e5f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kids Sandals">
+                    </a>
+                    <h3><a href="#kids-detail-12" class="product-title-link">Comfort Sandals</a></h3>
+                    <p>Comfort Sandals is a premium footwear pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹699</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="kids-cart-12" class="cart-check" aria-label="Add Comfort Sandals to cart">
+                            <label for="kids-cart-12" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#kids-detail-13" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682559-1a2b3c4d5e6f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kids Jacket 2">
+                    </a>
+                    <h3><a href="#kids-detail-13" class="product-title-link">Puffer Jacket</a></h3>
+                    <p>Puffer Jacket is a premium outerwear pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹1,599</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="kids-cart-13" class="cart-check" aria-label="Add Puffer Jacket to cart">
+                            <label for="kids-cart-13" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#kids-detail-14" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682569-2b3c4d5e6f7a?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kids Set">
+                    </a>
+                    <h3><a href="#kids-detail-14" class="product-title-link">Play Set (2-piece)</a></h3>
+                    <p>Play Set (2-piece) is a premium sets pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="kids-cart-14" class="cart-check" aria-label="Add Play Set (2-piece) to cart">
+                            <label for="kids-cart-14" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <a href="#kids-detail-15" class="product-media-link">
+                        <img src="https://images.unsplash.com/photo-1520975682579-3c4d5e6f7a8b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Kids Jacket 3">
+                    </a>
+                    <h3><a href="#kids-detail-15" class="product-title-link">Fleece Jacket</a></h3>
+                    <p>Fleece Jacket is a premium outerwear pick designed for quality, comfort and daily use.</p>
+                    <div class="card-foot">
+                        <span>₹899</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="kids-cart-15" class="cart-check" aria-label="Add Fleece Jacket to cart">
+                            <label for="kids-cart-15" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="market-footer">
+        <p>© 2026 NexaNest Store — Kids Collection</p>
+    </footer>
+
+    <!-- Pure CSS Secure Checkout Modal -->
+    <div id="checkout-modal" class="market-modal" aria-hidden="true">
+        <a href="#" class="market-modal-overlay" aria-label="Close checkout"></a>
+        <div class="market-modal-card checkout-modal-card">
+            <a href="#" class="market-modal-close" aria-label="Close checkout"><i class="fa-solid fa-xmark"></i></a>
+            
+            <input type="checkbox" id="checkout-success-toggle" class="checkout-success-toggle">
+            
+            <div class="checkout-form-view">
+                <h2>Secure Checkout</h2>
+                <p class="checkout-sub">Enter your details to complete your purchase.</p>
+                <form class="checkout-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="co-name">Full Name</label>
+                        <input type="text" id="co-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="co-address">Shipping Address</label>
+                        <input type="text" id="co-address" placeholder="123 Main St, City" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="co-payment">Card Number</label>
+                        <input type="text" id="co-payment" placeholder="1111-2222-3333-4444" required>
+                    </div>
+                    <label for="checkout-success-toggle" class="checkout-submit-btn">Place Order</label>
+                </form>
+            </div>
+            
+            <div class="checkout-success-view">
+                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h2>Order Confirmed!</h2>
+                <p>Your order has been successfully placed. Thank you for choosing NexaNest!</p>
+                <a href="#" class="checkout-done-btn">Done</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="modal-scroll-fix.js"></script>
+    <script src="cart.js" defer></script>
+</body>
+</html>

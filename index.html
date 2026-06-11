@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaNest Store — Home</title>
+    <meta name="description" content="NexaNest Store built with only HTML and CSS. Explore fashion, gadgets, furniture and everyday essentials.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="market-body">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <aside class="side-drawer">
+        <div class="drawer-head">
+            <h2>Browse Categories</h2>
+            <label for="menu-toggle" class="close-drawer" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="mens.html"><i class="fa-solid fa-shirt"></i> Men</a>
+            <a href="womens.html"><i class="fa-solid fa-person-dress"></i> Women</a>
+            <a href="kids.html"><i class="fa-solid fa-child-reaching"></i> Kids</a>
+            <a href="electronics.html"><i class="fa-solid fa-tv"></i> Electronics</a>
+            <a href="mobile.html"><i class="fa-solid fa-mobile-screen-button"></i> Mobiles</a>
+            <a href="furniture.html"><i class="fa-solid fa-couch"></i> Furniture</a>
+        </nav>
+    </aside>
+    <label for="menu-toggle" class="drawer-overlay"></label>
+
+    <header class="market-topbar">
+        <div class="topbar-left">
+            <label for="menu-toggle" class="menu-icon" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <a href="index.html" class="brand-logo">NexaNest</a>
+        </div>
+        <div class="topbar-search">
+            <input type="text" placeholder="Search products, brands and more">
+            <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="topbar-right">
+            <a href="signin.html"><i class="fa-solid fa-user"></i> Account</a>
+            <a href="#" class="cart-link"><i class="fa-solid fa-cart-shopping"></i> Cart <span class="cart-badge" aria-hidden="true"></span></a>
+        </div>
+    </header>
+
+    <main class="market-main">
+        <section class="promo-banner">
+            <div class="promo-text">
+                <p class="promo-tag">NexaNest Weekly Picks</p>
+                <h1>Curated styles, smart gadgets and home upgrades in one place</h1>
+                 Shop the latest trends and top-rated products across categories, handpicked for you every week.
+            </div>
+            <img src="https://images.pexels.com/photos/5650042/pexels-photo-5650042.jpeg?auto=compress&cs=tinysrgb&w=1" alt="Online shopping">
+        </section>
+
+        <section class="quick-categories">
+            <a href="mens.html">Men</a>
+            <a href="womens.html">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="mobile.html">Mobiles</a>
+            <a href="electronics.html">Electronics</a>
+            <a href="furniture.html">Furniture</a>
+        </section>
+
+        <section class="featured-products">
+            <div class="section-head">
+                <h2>Top Picks For You</h2>
+                <a href="electronics.html">View All</a>
+            </div>
+
+            <div class="market-grid">
+                <article class="market-card">
+                    <img src="https://m.media-amazon.com/images/I/51xTiE941pL.jpg" alt="Wireless headphones">
+                    <h3>SoundMax Wireless Headphones</h3>
+                    <p>Crystal clear audio with deep bass and 30-hour battery.</p>
+                    <div class="card-foot">
+                        <span>₹2,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="home-cart-1" class="cart-check" aria-label="Add SoundMax Wireless Headphones to cart">
+                            <label for="home-cart-1" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <img src="https://cdn.beebom.com/mobile/oppo-a6c-back-front.png" alt="Smartphone">
+                    <h3>NexaPro 5G Smartphone</h3>
+                    <p>Fast performance, bright AMOLED display and pro camera.</p>
+                    <div class="card-foot">
+                        <span>₹24,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="home-cart-2" class="cart-check" aria-label="Add NexaPro 5G Smartphone to cart">
+                            <label for="home-cart-2" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <img src="https://shoplineimg.com/59c87e98d4e395c686000d2a/6965f4a194a6fa82ab449ef5/800x.png?" alt="Laptop">
+                    <h3>UltraBook Air 14</h3>
+                    <p>Lightweight laptop for coding, study and daily work.</p>
+                    <div class="card-foot">
+                        <span>₹52,990</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="home-cart-3" class="cart-check" aria-label="Add UltraBook Air 14 to cart">
+                            <label for="home-cart-3" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <img src="https://www.nuvenci.dk/cdn/shop/files/chronofit-smartwatch-med-elegant-design-og-lang-batteritid-smart-watches-nuvenci_dk-sort-3.png?v=1772023614&width=700" alt="Watch">
+                    <h3>ChronoFit Smart Watch</h3>
+                    <p>Fitness tracking, call alerts and elegant metal finish.</p>
+                    <div class="card-foot">
+                        <span>₹3,499</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="home-cart-4" class="cart-check" aria-label="Add ChronoFit Smart Watch to cart">
+                            <label for="home-cart-4" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <img src="https://m.media-amazon.com/images/I/61LZtZCFVvL._AC_UF894,1000_QL80_.jpg" alt="Sofa set">
+                    <h3>UrbanLounge Sofa Set</h3>
+                    <p>Comfort-focused sofa with premium fabric and modern style.</p>
+                    <div class="card-foot">
+                        <span>₹18,999</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="home-cart-5" class="cart-check" aria-label="Add UrbanLounge Sofa Set to cart">
+                            <label for="home-cart-5" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/shoe/v/v/c/-original-imahgcsubdfsm6cm.jpeg?q=90" alt="Men sneakers">
+                    <h3>StrideFlex Casual Sneakers</h3>
+                    <p>Lightweight design with all-day comfort and grip.</p>
+                    <div class="card-foot">
+                        <span>₹1,899</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="home-cart-6" class="cart-check" aria-label="Add StrideFlex Casual Sneakers to cart">
+                            <label for="home-cart-6" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <img src="https://assets.myntassets.com/w_412,q_50,,dpr_3,fl_progressive,f_webp/assets/images/2024/NOVEMBER/4/nBhcHn4k_b91e85ad7bdd47698753012decb64d68.jpg" alt="Women dress">
+                    <h3>Elegra Midi Dress</h3>
+                    <p>Elegant silhouette for daily wear and weekend outings.</p>
+                    <div class="card-foot">
+                        <span>₹1,699</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="home-cart-7" class="cart-check" aria-label="Add Elegra Midi Dress to cart">
+                            <label for="home-cart-7" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="market-card">
+                    <img src="https://www.prettylittle.in/cdn/shop/files/IMG_20260227_104926.png?v=1772171327&width=1024" alt="Kids clothing">
+                    <h3>HappyKids Cotton Set</h3>
+                    <p>Soft breathable cotton set for active kids and comfort.</p>
+                    <div class="card-foot">
+                        <span>₹899</span>
+                        <div class="card-actions">
+                            <input type="checkbox" id="home-cart-8" class="cart-check" aria-label="Add HappyKids Cotton Set to cart">
+                            <label for="home-cart-8" class="add-cart-btn">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span class="add-default">Add to Cart</span>
+                            <span class="add-added">Added</span>
+                        </label>
+                            <a href="#checkout-modal" class="buy-now-btn">Buy Now</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+
+
+    <footer class="market-footer">
+        <p>© 2026 NexaNest Store — 6th sem HTML & CSS Ecommerce Project</p>
+    </footer>
+
+    <!-- Pure CSS Secure Checkout Modal -->
+    <div id="checkout-modal" class="market-modal" aria-hidden="true">
+        <a href="#" class="market-modal-overlay" aria-label="Close checkout"></a>
+        <div class="market-modal-card checkout-modal-card">
+            <a href="#" class="market-modal-close" aria-label="Close checkout"><i class="fa-solid fa-xmark"></i></a>
+            
+            <input type="checkbox" id="checkout-success-toggle" class="checkout-success-toggle">
+            
+            <div class="checkout-form-view">
+                <h2>Secure Checkout</h2>
+                <p class="checkout-sub">Enter your details to complete your purchase.</p>
+                <form class="checkout-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="co-name">Full Name</label>
+                        <input type="text" id="co-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="co-address">Shipping Address</label>
+                        <input type="text" id="co-address" placeholder="123 Main St, City" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="co-payment">Card Number</label>
+                        <input type="text" id="co-payment" placeholder="1111-2222-3333-4444" required>
+                    </div>
+                    <label for="checkout-success-toggle" class="checkout-submit-btn">Place Order</label>
+                </form>
+            </div>
+            
+            <div class="checkout-success-view">
+                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h2>Order Confirmed!</h2>
+                <p>Your order has been successfully placed. Thank you for choosing NexaNest!</p>
+                <a href="#" class="checkout-done-btn">Done</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="modal-scroll-fix.js"></script>
+    <script src="cart.js" defer></script>
+</body>
+</html>
